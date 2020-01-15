@@ -1,0 +1,32 @@
+server:
+  port: 80
+  tomcat:
+    max-threads: 150
+
+spring:
+  datasource:
+    hikari:
+      connection-timeout: 5000
+      validation-timeout: 1000
+      maximum-pool-size: 150
+      minimum-idle: 2
+      connection-test-query: SELECT 1
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+  task:
+    execution:
+      pool:
+        core-size: 8
+        max-size: 8
+  messages:
+    always-use-message-format: false
+    cache-duration: -1
+    basename: message/error, message/message
+    encoding: UTF-8
+    
+restTemplate:
+  factory:
+    readTimeout: 5000 
+    connectTimeout: 3000
+  httpClient:
+    maxConnTotal: 100
+    maxConnPerRoute: 5

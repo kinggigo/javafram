@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    password: ryu864212!
+    url: jdbc:log4jdbc:postgresql://localhost:5432/Test
+    username: postgres
+    
+logging:
+  path: C:\sts-4.3.0.RELEASE\log\framework
+  level:
+    jdbc: OFF
+    jdbc.sqlonly: OFF
+    jdbc.sqltiming: DEBUG
+    jdbc.audit: OFF
+    jdbc.resultset: OFF
+    jdbc.resultsettable: DEBUG
+    jdbc.connection: OFF
+    org.springframework.web: DEBUG
+    com.zaxxer.hikari.HikariDataSource: ERROR
+    
+blockchain:
+  node:
+    url: 
+  keystore:
+      path: 
+      password: 
+      
+static:
+  resource:
+    location: 
